@@ -7,7 +7,7 @@ render = web.template.render('templates/')
 
 class hello:
     name = 'Eugene'    
-    return render.index(name)
+    return render.start(name)
 
 if __name__ == "__main__":
     app.run()
