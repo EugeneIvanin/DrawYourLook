@@ -1,13 +1,6 @@
-<!doctype html>
-<html>
-<head>
-</head>
-<body>
-  <style>
-  body{
-      background-color: #560e72; /* Цвет фона */
-  }
-  </style>
-  <em>Hello</em>, world!
-</body>
-</html>
+$def with (name)
+
+$if name:
+    I just wanted to say <em>hello</em> to $name.
+$else:
+    <em>Hello</em>, world!
