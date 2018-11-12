@@ -25,10 +25,10 @@ class filters:
         
 class result:
     def GET(self, filter_url):
-        list_url_filter = filter_url.split('.zip', 1) 
-        filter = list_url_filter[0]
-        address = list_url_filter[1]
-        return render.result(address, filter)
+        #list_url_filter = filter_url.split('.zip', 1) 
+        #filter = list_url_filter[0]
+        #address = list_url_filter[1]
+        return render.result(filter_url)
     
 
         
