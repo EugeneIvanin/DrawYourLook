@@ -19,7 +19,7 @@ body{
             
                <script type='text/javascript'>
                  function photoSelected( result ) {
-                    document.getElementById("demo").innerHTML = result;
+                    url = result["photos"][0]["image_url"];
                  }
                </script>
                <a href='callback:nativePhotoSelect?func=photoSelected'><img src="/static/g.gif" width="100%" alt=""></a>
