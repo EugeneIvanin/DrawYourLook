@@ -14,15 +14,11 @@ session = web.session.Session(app, web.session.DiskStore('sessions'), initialize
 class start:
     def GET(self):
         return render.start()
-    
-    def POST(self):
-        url = web.input()
-        raise web.seeother('/filters', url)
 
         
 class filters:
     def GET(self):
-        return render.filters()
+        return render.start()
    
         
 class result:
