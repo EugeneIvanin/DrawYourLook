@@ -22,10 +22,10 @@ body{
                     url = result["photos"][0]["image_url"];
                     url = String(url);
                     beg = "<a href='/filters'";
-                    beg.concat(url);
-                    beg.concat(">");
-                    beg.concat(url);
-                    beg.concat("</a>");
+                    beg = beg.concat(url);
+                    beg = beg.concat(">");
+                    beg = beg.concat(url);
+                    beg = beg.concat("</a>");
                     document.write(beg);
                  }
                </script>
