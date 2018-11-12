@@ -15,15 +15,16 @@ body{
     <div class="container">
        <div class="row">
            <div class="cols col-12" >
-               <form method="post">
-               <input type="text" id="output"> 
-               </form>
+               <form>
+                  <input type="text" id="output" value="Mouse">
+                  <input type="submit" id="cli" value="Submit">
+                </form>
                <script type='text/javascript'>
                  function photoSelected( result ) {
                     url = result["photos"][0]["image_url"];
                     url = String(url);
                     document.getElementById('output').value =  '/filters' + url;
-                    document.getElementById('output').click();
+                    document.getElementById('cli').click();
                  }
                </script>
                <a href='callback:nativePhotoSelect?func=photoSelected'><img src="/static/g.gif" width="100%" alt=""></a>   
