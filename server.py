@@ -17,7 +17,8 @@ class start:
 
     def POST(self):
         url = web.input()
-        raise web.seeother('/filters')
+        url = string(url)
+        raise web.seeother(url)
         
 class filters:
     def GET(self, url):
