@@ -15,16 +15,16 @@ body{
     <div class="container">
        <div class="row">
            <div class="cols col-12" >
-               <p id="demo"></p>
-            
+               <a href= <p id="output"></p> >prozrach</a> 
                <script type='text/javascript'>
                  function photoSelected( result ) {
                     url = result["photos"][0]["image_url"];
                     url = String(url);
-                    window.location.href = '/filters' + url;
+                    document.getElementById('output').innerHTML =  '/filters' + url;
                  }
                </script>
                <a href='callback:nativePhotoSelect?func=photoSelected'><img src="/static/g.gif" width="100%" alt=""></a>   
+               
            </div>
        </div>
     </div>
