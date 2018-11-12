@@ -17,7 +17,7 @@ class start:
         
 class filters:
     def GET(self):
-        return render.filters()
+        return render.filters(session['URL'])
    
         
 class result:
