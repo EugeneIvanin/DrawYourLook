@@ -21,8 +21,8 @@ class start:
         raise web.seeother(url)
         
 class filters:
-    def GET(self, url):
-        return render.filters(url)
+    def GET(self, name):
+        return render.filters(name)
    
         
 class result:
