@@ -21,9 +21,8 @@ class start:
 
         
 class filters:
-    def GET(self):
-        name = 'filters_page'
-        return render.start(name)
+    def GET(self, url):
+        return render.start(url)
    
         
 class result:
