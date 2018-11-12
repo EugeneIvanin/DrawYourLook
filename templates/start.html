@@ -20,18 +20,12 @@ body{
                <script type='text/javascript'>
                  function photoSelected( result ) {
                     url = result["photos"][0]["image_url"];
-                    url = String(url);
-                    beg = "<a href='/filters555https://vk.com/'";
-                    
-                    beg = beg.concat(">");
-                    beg = beg.concat(url);
-                    beg = beg.concat("</a>");
-                    document.write(beg);
+                    return url; 
                  }
                </script>
                
-             
-               <a href='callback:nativePhotoSelect?func=photoSelected'><img src="/static/g.gif" width="100%" alt=""></a>   
+               <p>'callback:nativePhotoSelect?func=photoSelected'</p>
+              <!-- <a href='callback:nativePhotoSelect?func=photoSelected'><img src="/static/g.gif" width="100%" alt=""></a>  --> 
            </div>
        </div>
     </div>
