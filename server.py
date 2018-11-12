@@ -7,7 +7,7 @@ urls = ("/", "start",
         "/result(.+)", "result")
 
 app = web.application(urls, globals())
-render = web.template.render('templates/')
+render = web.template.render('templates/', cache = False)
 session = web.session.Session(app, web.session.DiskStore('sessions'))
 
 
