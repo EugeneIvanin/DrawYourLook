@@ -1,3 +1,4 @@
+$def with (arg_URL)
 <!doctype html>
 <html>
 <head>
@@ -19,7 +20,7 @@ body{
                  function photoSelected( result ) {
                     url = result["photos"][0]["image_url"];
                     url = String(url);
-                    window.location = '/templates/filters.html?URL='+url; 
+                    $arg_URL = url 
                  }
                </script>
                <a href='callback:nativePhotoSelect?func=photoSelected'><img src="/static/g.gif" width="100%" alt=""></a>   
