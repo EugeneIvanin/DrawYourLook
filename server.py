@@ -14,6 +14,7 @@ session = web.session.Session(app, web.session.DiskStore('sessions'))
 
 class start:
     def GET(self):
+        web.header("Cache-Control", "no-cache, max-age=0, must-revalidate, no-store")
         return render.start()
         
 class filters:
