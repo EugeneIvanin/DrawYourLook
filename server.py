@@ -3,7 +3,7 @@ import web
 web.config.debug = False
 
 urls = ("/", "start",
-        "/filters(.*)", "filters",
+        "/filters(.+)", "filters",
         "/result(.+)", "result")
 
 app = web.application(urls, globals())
@@ -17,7 +17,6 @@ class start:
         
 class filters:
     def GET(self, name):
-        name = session['URL']
         return render.filters(name)
    
         
