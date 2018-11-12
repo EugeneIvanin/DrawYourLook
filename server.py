@@ -16,8 +16,8 @@ class start:
         return render.start()
         
 class filters:
-    def GET(self):
-        return render.filters()
+    def GET(self, url):
+        return render.filters(url)
    
         
 class result:
