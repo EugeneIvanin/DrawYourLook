@@ -13,11 +13,11 @@ session = web.session.Session(app, web.session.DiskStore('sessions'), initialize
 
 class start:
     def GET(self):
-        return render.start(session['URL'])
+        return render.start()
         
 class filters:
-    def GET(self, name):
-        return render.filters(name)
+    def GET(self):
+        return render.filters()
    
         
 class result:
