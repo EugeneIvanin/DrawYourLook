@@ -8,7 +8,7 @@ urls = ("/", "start",
 
 app = web.application(urls, globals())
 render = web.template.render('templates/')
-session = web.session.Session(app, web.session.DiskStore('sessions'), initializer={'filter': 0, 'URL':"empty"})
+session = web.session.Session(app, web.session.DiskStore('sessions'))
 
 
 class start:
@@ -21,8 +21,8 @@ class filters:
    
         
 class result:
-    def GET(self):
-        return render.start()
+    def GET(self, filter):
+        return render.result(filter)
     
 
         
