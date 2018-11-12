@@ -4,7 +4,7 @@ web.config.debug = False
 
 urls = ("/", "start",
         "/filters", "filters",
-        "/result", "result")
+        "/result(.+)", "result")
 
 app = web.application(urls, globals())
 render = web.template.render('templates/')
@@ -13,8 +13,7 @@ session = web.session.Session(app, web.session.DiskStore('sessions'), initialize
 
 class start:
     def GET(self):
-        render.start()
-        return render.filters()
+        return render.start()
         
 class filters:
     def GET(self):
