@@ -21,14 +21,14 @@ class start:
 
         
 class filters:
-    def GET(self, url):
-        return render.start(url)
+    def GET(self):
+        return render.filters()
    
         
 class result:
     def GET(self):
         name = 'result_page'
-        return render.start(name)
+        return render.result(name)
     
 
         
