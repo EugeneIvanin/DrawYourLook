@@ -27,8 +27,8 @@ class result:
     def GET(self, filter_url):
         list_url_filter = filter_url.split('.zip', 1) 
         filter = list_url_filter[0]
-        url = list_url_filter[1]
-        return render.result(url, filter)
+        address = list_url_filter[1]
+        return render.result(address, filter)
     
 
         
