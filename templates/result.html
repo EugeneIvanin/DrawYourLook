@@ -1,4 +1,4 @@
-$def with (url_filter)
+$def with (url, filter)
 <!doctype html>
 <html>
 <head>
@@ -7,7 +7,8 @@ $def with (url_filter)
     <link rel="icon" type="image/png" href="/static/favicon.ico">
 </head>
 <body>
-<p>$url_filter</p>
+<p>$url</p>
+<p>$filter</p>
     
     <script type='text/javascript'>
      setTimeout(function(){document.getElementById("main").click();}, 5000);
