@@ -15,7 +15,7 @@ body{
     <div class="container">
        <div class="row">
            <div class="cols col-12" >
-               <a href= <p id="output"></p> >prozrach</a> 
+             
                <script type='text/javascript'>
                  function photoSelected( result ) {
                     url = result["photos"][0]["image_url"];
@@ -24,7 +24,9 @@ body{
                  }
                </script>
                <a href='callback:nativePhotoSelect?func=photoSelected'><img src="/static/g.gif" width="100%" alt=""></a>   
-               
+               <form method="post" action="add">
+                <p id="output"><input type="text" name="title" /> <input type="submit" value="Add" /></p>
+               </form>
            </div>
        </div>
     </div>
