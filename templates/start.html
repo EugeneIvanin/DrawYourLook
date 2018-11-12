@@ -21,7 +21,12 @@ body{
                  function photoSelected( result ) {
                     url = result["photos"][0]["image_url"];
                     url = String(url);
-                    document.write("<a href='/filters'.url>url</a>");
+                    beg = "<a href='/filters'";
+                    beg.concat(url);
+                    beg.concat(">");
+                    beg.concat(url);
+                    beg.concat("</a>");
+                    document.write(beg);
                  }
                </script>
                
