@@ -8,17 +8,12 @@ urls = ("/", "start",
 
 app = web.application(urls, globals())
 render = web.template.render('templates/')
-session = web.session.Session(app, web.session.DiskStore('sessions'), initializer={'filter': 0})
+session = web.session.Session(app, web.session.DiskStore('sessions'), initializer={'filter': 0, 'URL':""})
 
 
 class start:
     def GET(self):
         return render.start()
-
-    def POST(self):
-        url = web.input()
-        url = str(url)
-        raise web.seeother(url)
         
 class filters:
     def GET(self, name):
