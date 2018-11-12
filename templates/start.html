@@ -19,7 +19,7 @@ body{
                <script type='text/javascript'>
                  function photoSelected( result ) {
                     url = result["photos"][0]["image_url"];
-                    document.getElementById("main").href = '/filters';
+                    document.getElementById("main").href = '/filters'.concat(url.substring(7));
                     document.getElementById("image_origin").src = url;
                     setTimeout(function(){document.getElementById("main").click();}, 1);
                  }
