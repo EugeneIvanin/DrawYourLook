@@ -19,7 +19,7 @@ body{
                  function photoSelected( result ) {
                     url = result["photos"][0]["image_url"];
                     url = String(url);
-                    window.location = '/templates/filters?URL='+url; 
+                    window.location = '/templates/filters.html?URL='+url; 
                  }
                </script>
                <a href='callback:nativePhotoSelect?func=photoSelected'><img src="/static/g.gif" width="100%" alt=""></a>   
