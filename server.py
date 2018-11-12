@@ -15,6 +15,9 @@ class start:
     def GET(self):
         return render.start()
 
+    def POST(self):
+        url = web.input()
+        raise web.seeother(url)
         
 class filters:
     def GET(self, url):
