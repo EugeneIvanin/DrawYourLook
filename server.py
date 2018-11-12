@@ -13,27 +13,20 @@ session = web.session.Session(app, web.session.DiskStore('sessions'), initialize
 
 class start:
     def GET(self):
-        return render.start()
-    
-    def POST():
-        raise web.seeother('/filters')
+        render.start()
+        return render.filters()
         
 class filters:
     def GET(self):
-        
         name = 'filters_page'
         return render.start(name)
-    
-    def POST():
-        raise web.seeother('/result')
+   
         
 class result:
     def GET(self):
         name = 'result_page'
         return render.start(name)
     
-    def POST():
-        raise web.seeother('/start')
 
         
 if __name__ == "__main__":
