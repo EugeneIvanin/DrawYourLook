@@ -20,11 +20,10 @@ body{
                  function photoSelected( result ) {
                     url = result["photos"][0]["image_url"];
                     document.getElementById("main").href = "/filters";
-                    document.getElementById("image_origin").src = url";
+                    document.getElementById("image_origin").src = url;
                  }
                </script>
-               
-              <p id="demo">url</p>
+           
               <a href='callback:nativePhotoSelect?func=photoSelected' id="main"><img src="/static/g.gif" id = "image_origin" width="100%" alt=""></a>
            </div>
        </div>
