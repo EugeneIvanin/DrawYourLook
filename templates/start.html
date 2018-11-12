@@ -15,13 +15,14 @@ body{
     <div class="container">
        <div class="row">
            <div class="cols col-12" >
-               
-               <a href='callback:nativePhotoSelect?func=photoSelected'><img src="/static/g.gif" width="100%" alt=""></a>
-                <script type='text/javascript'>
+               <p id="demo"></p>
+            
+               <script type='text/javascript'>
                  function photoSelected( result ) {
-                    document.write(result);
+                    document.getElementById("demo").innerHTML = result;
                  }
-                </script>
+               </script>
+               <a href='callback:nativePhotoSelect?func=photoSelected'><img src="/static/g.gif" width="100%" alt=""></a>
            </div>
        </div>
     </div>
