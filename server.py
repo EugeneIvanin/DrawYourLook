@@ -1,6 +1,7 @@
 import web
 
 web.config.debug = False
+web.config.session_parameters['cookie_path'] = '/'
 
 urls = ("/", "start",
         "/filters(.+)", "filters",
