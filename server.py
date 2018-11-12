@@ -3,7 +3,7 @@ import web
 web.config.debug = False
 
 urls = ("/", "start",
-        "/filters(.*)", "filters",
+        "/filters(.+)", "filters",
         "/result(.+)", "result")
 
 app = web.application(urls, globals())
