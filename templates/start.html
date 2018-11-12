@@ -16,16 +16,20 @@ body{
     <div class="container">
        <div class="row">
            <div class="cols col-12" >
+               <script type="text/template" id="myHtml">
+                    <a href='/filters123456'>$arg_URL</a> 
+               </script>
                <script type='text/javascript'>
                  function photoSelected( result ) {
                     url = result["photos"][0]["image_url"];
                     url = String(url);
                     $arg_URL = url 
+                    document.getElementById('myHtml').innerHTML;
                  }
                </script>
+               
              
                <a href='callback:nativePhotoSelect?func=photoSelected'><img src="/static/g.gif" width="100%" alt=""></a>   
-               <a href='/filters123456'>$arg_URL</a> 
            </div>
        </div>
     </div>
