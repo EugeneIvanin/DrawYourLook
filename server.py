@@ -19,6 +19,7 @@ class start:
         
 class filters:
     def GET(self, url):
+        web.header("Cache-Control", "no-cache, max-age=0, must-revalidate, no-store")
         return render.filters(url)
    
         
