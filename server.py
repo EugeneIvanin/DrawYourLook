@@ -21,8 +21,8 @@ class filters:
    
         
 class result:
-    def GET(self, filter):
-        return render.result(filter)
+    def GET(self, url, filter):
+        return render.result(url, filter)
     
 
         
