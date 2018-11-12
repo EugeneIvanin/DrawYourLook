@@ -13,8 +13,7 @@ session = web.session.Session(app, web.session.DiskStore('sessions'), initialize
 
 class start:
     def GET(self):
-        name = 'Eugene'
-        return render.start(name)
+        return render.start()
     
     def POST():
         raise web.seeother('/filters')
