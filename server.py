@@ -23,8 +23,7 @@ class filters:
         
 class result:
     def GET(self):
-        name = 'result_page'
-        return render.result(name)
+        return render.start()
     
 
         
