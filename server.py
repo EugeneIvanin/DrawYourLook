@@ -30,9 +30,15 @@ class result:
         list_url_filter = filter_url.split('.zip', 1) 
         filter = list_url_filter[0]
         address = list_url_filter[1]
-        return render.result(address, filter)
+        
+        url = "http://" + url
+        after = subprocess.check_output(["bash", "script.sh", url, filter_url])
+        # ловим ошибку 
+        if not after.startswith('http'):
+            after = '/static/PhLab1.jpg'
+        address = after
+        return render.result(address)
     
-
         
 if __name__ == "__main__":
     app.run()
