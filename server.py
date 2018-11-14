@@ -31,7 +31,7 @@ class result:
         filter_url = list_url_filter[0] + '.zip'
         address = list_url_filter[1]
         
-        address = "http://" + adress
+        address = "http://" + address
         after = subprocess.check_output(["bash", "script.sh", address, filter_url])
         # catch error
         if not after.startswith('http'):
