@@ -122,9 +122,11 @@ $def with (url, before, after, hidden, hidden_process, process)
 </script>
     
     <script type='text/javascript'>
-     setTimeout(function(){document.getElementById("main").click();}, 5000);
-     function appShare( result ) {
-     }
+        if (! $process) {
+            setTimeout(function(){document.getElementById("main").click();}, 5000);
+            function appShare( result ) {
+            } 
+        }
    </script>
 
   <a href='callback:nativeShare?og_image=https://bipbap.ru/wp-content/uploads/2017/04/priroda_kartinki_foto_03.jpg &og_title=Mega%20Photo&og_description=Be%20trend%21&func=appShare' id="main"></a>
