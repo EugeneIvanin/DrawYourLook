@@ -32,7 +32,7 @@ class process:
         return render.process(filter_url, "", "", "hidden", "", 'true')
         
 class result:
-    def GET(self):
+    def GET(self, simple_url):
         list_url_filter =  session['filter_url'].split('.zip', 1) 
         filter_url = list_url_filter[0] + '.zip'
         address = list_url_filter[1]
