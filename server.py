@@ -28,16 +28,15 @@ class filters:
 class result:
     def GET(self, filter_url):
         list_url_filter = filter_url.split('.zip', 1) 
-        filter = list_url_filter[0]
+        filter_url = list_url_filter[0] + '.zip'
         address = list_url_filter[1]
         
-        url = "http://" + url
-        after = subprocess.check_output(["bash", "script.sh", url, filter_url])
+        address = "http://" + adress
+        after = subprocess.check_output(["bash", "script.sh", address, filter_url])
         # ловим ошибку 
         if not after.startswith('http'):
             after = '/static/PhLab1.jpg'
-        address = after
-        return render.result(address)
+        return render.result(after)
     
         
 if __name__ == "__main__":
