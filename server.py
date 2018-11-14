@@ -37,7 +37,7 @@ class result:
         # catch error
         if not after.startswith('http'):
             after = '/static/PhLab1.jpg'
-        return render.result(after)
+        return render.result(after, "")
     
         
 if __name__ == "__main__":
