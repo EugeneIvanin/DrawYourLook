@@ -7,8 +7,9 @@ web.config.debug = False
 web.config.session_parameters['cookie_path'] = '/'
 
 urls = ("/", "start",
-        "/filters(.+)", "filters",
-        "/result(.+)", "result")
+        "/filters(.*)", "filters",
+        "/result(.+)", "result",
+        "/process(.*)", "process")
 
 app = web.application(urls, globals())
 render = web.template.render('templates/', cache = False)
