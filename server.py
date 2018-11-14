@@ -33,7 +33,7 @@ class result:
         
         address = "http://" + adress
         after = subprocess.check_output(["bash", "script.sh", address, filter_url])
-        # ловим ошибку 
+        # catch error
         if not after.startswith('http'):
             after = '/static/PhLab1.jpg'
         return render.result(after)
