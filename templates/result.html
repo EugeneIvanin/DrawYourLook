@@ -1,4 +1,4 @@
-$def with (url, filter)
+$def with (after, hidden)
 <!doctype html>
 <html>
 <head>
@@ -10,9 +10,25 @@ $def with (url, filter)
     <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-<p>$url</p>
-<p>$filter</p>
     
+    <div class="main">
+    <div class="container">
+        <div class="row">
+            <div class="pictures">
+                <div $hidden id="example" style="text-align: center;">
+                    <div class="fb-share-button" data-href="$after" data-layout="button" data-size="large" data-mobile-iframe="false"></div>
+                    <table width="100%">
+                        <tr>
+                            <td>
+                                <img src="$after" width="100%" alt="example_pic_posle" />
+                            </td>
+                        </tr>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+
     <script type='text/javascript'>
      setTimeout(function(){document.getElementById("main").click();}, 5000);
      function appShare( result ) {
