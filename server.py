@@ -8,12 +8,12 @@ web.config.session_parameters['cookie_path'] = '/'
 
 urls = ("/", "start",
         "/filters(.*)", "filters",
-        "/result(.+)", "result",
+        "/result(.*)", "result",
         "/process(.*)", "process")
 
 app = web.application(urls, globals())
 render = web.template.render('templates/', cache = False)
-session = web.session.Session(app, web.session.DiskStore('sessions'))
+session = web.session.Session(app, web.session.DiskStore('sessions'), {'filter_url': False})
 
 
 class start:
@@ -28,11 +28,12 @@ class filters:
    
 class process:
     def GET(self, filter_url):
+        session['filter_url'] = filter_url
         return render.process(filter_url, "", "", "hidden", "", 'true')
         
 class result:
-    def GET(self, filter_url):
-        list_url_filter = filter_url.split('.zip', 1) 
+    def GET(self):
+        list_url_filter =  session['filter_url'].split('.zip', 1) 
         filter_url = list_url_filter[0] + '.zip'
         address = list_url_filter[1]
         
