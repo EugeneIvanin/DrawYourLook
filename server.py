@@ -25,6 +25,9 @@ class filters:
         web.header("Cache-Control", "no-cache, max-age=0, must-revalidate, no-store")
         return render.filters(url)
    
+class process:
+    def GET(self, filter_url):
+        return render.process(filter_url, "", "", "hidden", "", 'true')
         
 class result:
     def GET(self, filter_url):
@@ -37,7 +40,8 @@ class result:
         # catch error
         if not after.startswith('http'):
             after = '/static/PhLab1.jpg'
-        return render.result(after, "")
+        return render.process(filter_url, "", after, "", "hidden", 'false')
+
     
         
 if __name__ == "__main__":
