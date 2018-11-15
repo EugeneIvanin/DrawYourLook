@@ -53,18 +53,18 @@ a:hover {
     width: 100%;
     max-width: 1024px; /*максимальная ширина может иметь другое значение*/
     /*height: 50px;*/
-    padding: 0 15px;
+    /*padding: 0 15px;*/
     margin: 0 auto;
     background: #fcfcc6; /* Для старых браузров */
     /*background: repeating-linear-gradient(130deg, deeppink, blueviolet, darkslateblue);*/
-    padding: 10px;
+    /*padding: 10px;*/
 }
 
 .top {
     /*float: left;*/
 
     background: repeating-linear-gradient(130deg, deeppink, blueviolet, darkslateblue);
-    padding: 10px;
+    /*padding: 10px;*/
 }
 
 @import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed');
