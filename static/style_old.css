@@ -220,34 +220,6 @@ nav li {
     background-position: 0 0;
 }
 
-/*
-.parent_popup {
-    background: #000;
-    height: 100%;
-    opacity: 0.5;
-    position: fixed;
-    width: 100%;
-    z-index: 100;
-    top: 0;
-    left: 0;
-    color: black;
-}
-
-.popup{
-    position: relative }
-.popup p {
-    height: 500px;
-    width: 900px;
-    opacity: 1.0;
-    padding: 100px;
-    background: white;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%)
-}*/
-
 #wrap{
     display: none;
     opacity: 0.9;
