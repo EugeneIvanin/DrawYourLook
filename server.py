@@ -28,7 +28,7 @@ class start:
         
 class filters:
     def GET(self, url):
-        if not session['origin_url'].startswith('http'):
+        if not session['origin_url'].startswith('http') or url != 'fromprocess':
             session['origin_url'] = "http://" + url
         return render.filters()
    
