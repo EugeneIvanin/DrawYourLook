@@ -8,40 +8,45 @@ web.config.session_parameters['cookie_path'] = '/'
 
 urls = ("/", "start",
         "/filters(.*)", "filters",
-        "/result(.+)", "result",
+        "/result(.*)", "result",
         "/process(.*)", "process")
 
 app = web.application(urls, globals())
 render = web.template.render('templates/', cache = False)
-session = web.session.Session(app, web.session.DiskStore('sessions'))
+
+
+if web.config.get('_session') is None:
+    session = web.session.Session(app, web.session.DiskStore('sessions'), {'filter_url': "", 'origin_url': ""})
+    web.config._session = session
+else:
+    session = web.config._session
 
 
 class start:
     def GET(self):
-        web.header("Cache-Control", "no-cache, max-age=0, must-revalidate, no-store")
         return render.start()
         
 class filters:
     def GET(self, url):
-        web.header("Cache-Control", "no-cache, max-age=0, must-revalidate, no-store")
-        return render.filters(url)
+        session['origin_url'] = "http://" + url
+        return render.filters()
    
 class process:
     def GET(self, filter_url):
-        return render.process(filter_url, "", "", "hidden", "", 'true')
+        session['filter_url'] = filter_url
+        return render.process("", "", "hidden", "", 'true')
         
 class result:
-    def GET(self, filter_url):
-        list_url_filter = filter_url.split('.zip', 1) 
-        filter_url = list_url_filter[0] + '.zip'
-        address = list_url_filter[1]
+    def GET(self, dummy_url):
+     
+        filter_url = session['filter_url']
+        origin_url = session['origin_url']
         
-        address = "http://" + address
-        after = subprocess.check_output(["bash", "script.sh", address, filter_url])
+        after = subprocess.check_output(["bash", "script.sh", origin_url, filter_url])
         # catch error
         if not after.startswith('http'):
             after = '/static/PhLab1.jpg'
-        return render.process(filter_url, "", after, "", "hidden", 'false')
+        return render.process("", after, "", "hidden", 'false')
 
     
         

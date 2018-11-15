@@ -1,4 +1,4 @@
-$def with (url, before, after, hidden, hidden_process, process)
+$def with (before, after, hidden, hidden_process, process)
 <html xmlns:display="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8">
@@ -112,21 +112,23 @@ $def with (url, before, after, hidden, hidden_process, process)
     </div>
 </div>
 
-<footer>
+<footer> 
     <div class="container">
         <p></p>
     </div>
 
     <div class="col-1-2">
-    <div class="buttom_choose_file" style="text-align: center;">
-        <a href="/filters">Назад к выбору фильтра</a>
+    <div $hidden class="buttom_choose_file" style="text-align: center;">
+        <a href="/filters">Back to filters</a>
     </div>
 </div>
 </footer>
+   
+
 
 <script>
     if ($process) {
-        window.location.href='/result'.concat(url);
+        window.location.href='/result';
     }
 </script>
     
