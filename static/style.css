@@ -53,20 +53,6 @@ img {
 .clear:after {
     clear: both;
 }
-@media screen and (max-width: 320px) {
-    h1{
-        color: aqua;
-    }
-    .container .cols.col-1,
-    .container .cols.col-2,
-    .container .cols.col-3,
-    .container .cols.col-4,
-    .container .cols.col-5,
-    .container .cols.col-6,
-    .container .cols.col-7,
-    .container .cols.col-8,
-    .container .cols.col-9,
-    .container .cols.col-10,
-    .container .cols.col-11,
-    .container .cols.col-12 {width: 100%;}
-}
+
+.container .cols.col-12 {width: 100%;}
+
