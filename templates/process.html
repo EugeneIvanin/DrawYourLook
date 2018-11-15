@@ -118,9 +118,9 @@ $def with (before, after, hidden, hidden_process, process)
     </div>
 
     <div class="col-1-2">
-    <div $hidden class="buttom_choose_file" style="text-align: center;">
+    <!--<div $hidden class="buttom_choose_file" style="text-align: center;">
         <a href="/filtersfromprocess">Back to filters</a>
-    </div>
+    </div>-->
 </div>
 </footer>
    
@@ -139,12 +139,26 @@ $def with (before, after, hidden, hidden_process, process)
             } 
         }
    </script>
-   
-    <div class="col-1-2">
-    <div $hidden class="buttom_choose_file" style="text-align: center;">
-        <a href='callback:nativeShare?og_image=https://bipbap.ru/wp-content/uploads/2017/04/priroda_kartinki_foto_03.jpg &og_title=Mega%20Photo&og_description=Be%20trend%21&func=appShare' id="main">Share</a>
-    </div>
-    </div>
+
+<table>
+    <tr>
+        <td width="50%">
+            <div $hidden class="buttom_choose_file" style="text-align: center;">
+                <a href="/filtersfromprocess">Back to filters</a>
+            </div>
+        </td>
+
+        <td width="50%">
+            <div class="col-1-2">
+                <div $hidden class="buttom_choose_file" style="text-align: center;">
+                    <a href='callback:nativeShare?og_image=https://bipbap.ru/wp-content/uploads/2017/04/priroda_kartinki_foto_03.jpg &og_title=Mega%20Photo&og_description=Be%20trend%21&func=appShare' id="main">Share</a>
+                </div>
+            </div>
+        </td>
+    </tr>
+</table>
+
+
     
 </body>
 </html>
