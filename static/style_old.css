@@ -55,7 +55,7 @@ a:hover {
     /*height: 50px;*/
     /*padding: 0 15px;*/
     margin: 0 auto;
-    background: #fcfcc6; /* Для старых браузров */
+    background: #fff2bb; /* Для старых браузров */
     /*background: repeating-linear-gradient(130deg, deeppink, blueviolet, darkslateblue);*/
     /*padding: 10px;*/
 }
