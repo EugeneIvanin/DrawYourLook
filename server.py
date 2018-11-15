@@ -37,7 +37,7 @@ class process:
         return render.process("", "", "hidden", "", 'true')
         
 class result:
-    def GET(self):
+    def GET(self, dummy_url):
      
         filter_url = session['filter_url']
         origin_url = session['origin_url']
