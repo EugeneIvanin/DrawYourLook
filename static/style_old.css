@@ -179,7 +179,7 @@ nav li {
     position: center;
     text-align: center;
     display: inline-block;
-   padding: 12px 50px;
+   padding: 12px 70px;
     /*margin: 10px 20px;*/
     /*border-radius: 10px;*/
     background-image: linear-gradient(45deg, darkslateblue 0%, blueviolet 50%, deeppink 100%);
@@ -203,7 +203,7 @@ nav li {
     outline: none;
     text-align: center;
     display: inline-block;
-    padding: 12px 50px;
+    padding: 12px 70px;
     /*border-radius: 10px;*/
     background-image: linear-gradient(45deg, darkslateblue 0%, blueviolet 50%, deeppink 100%);
     background-position: 100% 0;
