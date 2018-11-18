@@ -45,8 +45,8 @@ class result:
         
         after = subprocess.check_output(["bash", "script.sh", origin_url, filter_url])
         # catch error
-        if not after.startswith('http'):
-            after = '/static/PhLab1.jpg'
+        # if not after.startswith('http'):
+         #   after = '/static/PhLab1.jpg'
         return render.process("", after, "", "hidden", 'false')
 
     
