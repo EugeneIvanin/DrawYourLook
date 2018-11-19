@@ -6,12 +6,17 @@ import subprocess
 web.config.debug = False
 web.config.session_parameters['cookie_path'] = '/'
 
+class MyApplication(web.application):
+        def run(self, port=80, *middleware):
+                func = self.wsgifunc(*middleware)
+                return web.httpserver.runsimple(func, ('0.0.0.0', port))
+
 urls = ("/", "start",
         "/filters(.*)", "filters",
         "/result(.*)", "result",
         "/process(.*)", "process")
 
-app = web.application(urls, globals())
+app = MyApplication(urls, globals())
 render = web.template.render('templates/', cache = False)
 
 
