@@ -197,13 +197,32 @@ nav li {
     background-position: 0 0;
 }
 
-.buttom_choose_file a, input {
+/*.buttom_choose_file a, input {
     position: center;
     text-decoration: none;
     outline: none;
     text-align: center;
     display: inline-block;
     padding: 12px 50px;
+    background-image: linear-gradient(45deg, darkslateblue 0%, blueviolet 50%, deeppink 100%);
+    background-position: 100% 0;
+    background-size: 200% 200%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    color: white;
+    transition: .5s;
+    width: 100%;
+}*/
+
+.buttom_choose_file a, input {
+    /*position: center;*/
+
+    text-decoration: none;
+    outline: none;
+    text-align: center;
+    display: inline;
+    padding: 12px 46%;
+
     /*border-radius: 10px;*/
     background-image: linear-gradient(45deg, darkslateblue 0%, blueviolet 50%, deeppink 100%);
     background-position: 100% 0;
@@ -212,8 +231,8 @@ nav li {
     font-size: 15px;
     color: white;
     /*box-shadow: 0 16px 32px 0 rgba(0,40,120,.35);*/
-    transition: .5s;
-    width: 100%;
+    /*transition: .5s;*/
+    width: 50%;
 }
 .buttom_choose_file a:hover {
     box-shadow: 0 0 0 0 rgba(0,40,120,0);
