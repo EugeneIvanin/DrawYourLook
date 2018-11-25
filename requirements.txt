@@ -2,4 +2,3 @@ virtualenv==16.0.0
 web.py==0.37
 wsgiref==0.1.2
 requests
-hmac
