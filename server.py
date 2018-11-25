@@ -2,6 +2,7 @@
 
 import web
 import subprocess
+from client_opeapi import ClientOpeapi
 
 web.config.debug = False
 web.config.session_parameters['cookie_path'] = '/'
