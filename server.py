@@ -45,13 +45,13 @@ class result:
         origin_url = session['origin_url']
         api = ClientOpeapi('dd23c729867efed20328bf3a8b7e9f23', '857165871a491e1ebc72b1abb2415606')
         if filter_url == 'blue_pink.zip':
-                template_name = '1001181'
+                template_name = '1001185'
         elif filter_url == 'comic.zip':
-                template_name = '1001182'
+                template_name = '1001186'
         elif filter_url == 'pop_art_light.zip':
-                template_name = '1001183'
+                template_name = '1001187'
         elif filter_url == 'stereo.zip':
-                template_name = '1001184'
+                template_name = '1001188'
                 
         after = api.template_process(origin_url, template_name)
         # after = subprocess.check_output(["bash", "script.sh", origin_url, filter_url])
