@@ -3,7 +3,4 @@ web.py==0.37
 wsgiref==0.1.2
 requests
 hmac
-hashlib.sha1
 xml.etree.ElementTree
-time.sleep
-logging
