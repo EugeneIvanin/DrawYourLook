@@ -46,11 +46,11 @@ class result:
         api = ClientOpeapi('dd23c729867efed20328bf3a8b7e9f23', '857165871a491e1ebc72b1abb2415606')
         if filter_url == 'blue_pink.zip':
                 template_name = '1001181'
-        else if filter_url == 'comic.zip':
+        elif filter_url == 'comic.zip':
                 template_name = '1001182'
-        else if filter_url == 'pop_art_light.zip':
+        elif filter_url == 'pop_art_light.zip':
                 template_name = '1001183'
-        else if filter_url == 'stereo.zip':
+        elif filter_url == 'stereo.zip':
                 template_name = '1001184'
                 
         after = api.template_process(origin_url, template_name)
