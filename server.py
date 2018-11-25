@@ -42,8 +42,18 @@ class result:
      
         filter_url = session['filter_url']
         origin_url = session['origin_url']
-        
-        after = subprocess.check_output(["bash", "script.sh", origin_url, filter_url])
+        api = ClientOpeapi('dd23c729867efed20328bf3a8b7e9f23', '857165871a491e1ebc72b1abb2415606')
+        if filter_url == :
+                template_name = '1001181'
+        else if filter_url == :
+                template_name = '1001182'
+        else if filter_url == :
+                template_name = '1001183'
+        else if filter_url == :
+                template_name = '1001184'
+                
+        after = api.template_process(origin_url, template_name)
+        # after = subprocess.check_output(["bash", "script.sh", origin_url, filter_url])
         # catch error
         if not after.startswith('http'):
             after = '/static/PhLab1.jpg'
