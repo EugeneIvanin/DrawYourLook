@@ -47,11 +47,11 @@ class result:
         if filter_url == 'blue_pink.zip':
                 template_name = '1001189'
         elif filter_url == 'comic.zip':
-                template_name = '1001186'
+                template_name = '1001190'
         elif filter_url == 'pop_art_light.zip':
-                template_name = '1001187'
+                template_name = '1001191'
         elif filter_url == 'stereo.zip':
-                template_name = '1001188'
+                template_name = '1001192'
                 
         after = api.template_process(origin_url, template_name)
         # after = subprocess.check_output(["bash", "script.sh", origin_url, filter_url])
