@@ -47,7 +47,7 @@ class result:
         if filter_url == 'blue_pink.zip':
                 template_name = '1001189'
         elif filter_url == 'comic.zip':
-                template_name = '1001193'
+                template_name = '1001182'
         elif filter_url == 'pop_art_light.zip':
                 template_name = '1001195'
         elif filter_url == 'stereo.zip':
