@@ -53,11 +53,14 @@ class result:
         elif filter_url == 'stereo.zip':
                 template_name = '1001196'
                 
-        after = api.template_process(origin_url, template_name)
         # after = subprocess.check_output(["bash", "script.sh", origin_url, filter_url])
         # catch error
-        if not after.startswith('http'):
-            after = '/static/PhLab1.jpg'
+        try:
+                after = api.template_process(origin_url, template_name)
+        except Exception as err:
+                after = '/static/PhLab1.jpg'
+        #if not after.startswith('http'):
+        #    after = '/static/PhLab1.jpg'
         return render.process("", after, "", "hidden", 'false')
 
     
