@@ -45,7 +45,7 @@ class result:
         origin_url = session['origin_url']
         api = ClientOpeapi('dd23c729867efed20328bf3a8b7e9f23', '857165871a491e1ebc72b1abb2415606')
         if filter_url == 'blue_pink.zip':
-                template_name = '1001185'
+                template_name = '1001189'
         elif filter_url == 'comic.zip':
                 template_name = '1001186'
         elif filter_url == 'pop_art_light.zip':
