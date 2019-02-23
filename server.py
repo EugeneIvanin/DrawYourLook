@@ -9,7 +9,7 @@ web.config.session_parameters['cookie_path'] = '/'
 def dima_roma(data):
         print(data)
         sys.stdout.flush()
-        return 
+        return data
         
 
 
@@ -37,6 +37,7 @@ class filters:
     def POST():
         data = web.data() # you can get data use this method
         answer = dima_roma(data)
+        return
         
     def GET(self, url):
         if not session['origin_url'].startswith('http') or url != 'fromprocess':
