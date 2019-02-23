@@ -23,18 +23,9 @@ body{
     <div class="container">
        <div class="row">
            <div class="cols col-12" >
-    
-               <script type='text/javascript'>
-                 function photoSelected( result ) {
-                    url = result["photos"][0]["image_url"];
-                    url = url.substring(7);
-                    window.location.href = '/filters'.concat(url);
-                 }
-               </script>
-             
-              <a href='callback:nativePhotoSelect?func=photoSelected&num_photos=1' id="main">
-                  <img src="/static/g.gif" id = "image_origin" width="100%" alt="">
-              </a>
+              <a href="/filters">
+                   <img src="/static/start.png" width="100%" alt="">
+               </a>
            </div>
        </div>
     </div>
