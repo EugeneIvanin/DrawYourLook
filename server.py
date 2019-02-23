@@ -6,6 +6,11 @@ import subprocess
 web.config.debug = False
 web.config.session_parameters['cookie_path'] = '/'
 
+def dima_roma(data):
+        print(data)
+        sys.stdout.flush()
+        return 
+        
 
 
 urls = ("/", "start",
@@ -29,11 +34,15 @@ class start:
         return render.start()
         
 class filters:
+    def POST():
+        data = web.data() # you can get data use this method
+        answer = dima_roma(data)
+        
     def GET(self, url):
         if not session['origin_url'].startswith('http') or url != 'fromprocess':
             session['origin_url'] = "http://" + url
         return render.filters()
-   
+
 class process:
     def GET(self, filter_url):
         session['filter_url'] = filter_url
