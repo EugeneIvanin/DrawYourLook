@@ -2,6 +2,8 @@
 
 import web
 from web import form
+import webbrowser
+
 
 import subprocess
 import sys
@@ -37,7 +39,8 @@ myform = form.Form(
         form.Validator('Не должно быть пустой строкой', lambda x: str(x) != ''))) 
 
 class get_result:
-    def GET(self):
+    def GET(self, url_path):
+        webbrowser.open('url_path') 
         return render.get_result()
         
 
