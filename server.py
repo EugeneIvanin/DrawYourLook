@@ -88,7 +88,11 @@ class anal:
         plt.xlabel('Время', fontsize=16)
         plt.ylabel('Количество работающих станков', fontsize=16)
         plt.savefig('plot2.png')
-        return render.anal()
+        
+        file_object1  = open('plot1.png', "r")
+        file_object2 = open('plot2.png', "r")
+        
+        return render.anal(file_object1, file_object2)
 
        
 class upload:
