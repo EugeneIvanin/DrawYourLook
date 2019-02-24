@@ -45,7 +45,6 @@ class get_result:
             lines = [l for l in lines if "ROW" in l]
             with open("C:/Users//Mvideo//Desktop//URAAAA.png","w")  as f1:
                 f1.writelines(lines)
-        sys.stderr.write("I AM ERE")
         return render.get_result()
 
        
@@ -67,9 +66,7 @@ class upload:
             r = requests.get(str_url)
             with open("get_data.xlsx",'wb') as f:
                     f.write(r.content) 
-            ob = get_result()
-            ob.GET()
-            return render.get_result()
+         return render.get_result()
         
 class start:
     def GET(self):
