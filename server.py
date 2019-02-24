@@ -10,6 +10,13 @@ import sys
 import os
 
 import requests 
+import matplotlib as mpl
+import matplotlib.pyplot as plt
+import csv
+import numpy as np
+import seaborn as sns
+import pandas as pd
+import xlrd
 
 web.config.debug = False
 web.config.session_parameters['cookie_path'] = '/'
@@ -50,6 +57,37 @@ class get_result:
 
 class anal:
     def GET(self):
+        df = pd.read_csv('roma_final_output.csv', header = None)
+        df.columns = ['machine', 'begin_time', 'end_time', 'name']
+        max_time = df['end_time'].max()
+        for t in range(max_time):
+                df[str(t)] = np.array(t >= df['begin_time'], dtype=int) * np.array(t <= df['end_time'] , dtype=int)
+        df_list = []
+        col_list = []
+        for i in range(max_time):
+            col_list += [str(i)]
+
+        col_list.append('name')
+
+        for mach in range(1, 11):
+            df_machine = df[df['machine']==mach][col_list]
+            df_list += [df_machine]
+        height = []
+        for i in range(10):
+            height += [ df_list[i].sum()[:-1].sum()]
+        plt.figure(figsize=(16,8))
+        plt.bar(range(1,11), height, color='darkgreen')
+        plt.title('Распределение времени работы по станкам', fontsize=20)
+        plt.xlabel('Номер станка', fontsize=16)
+        plt.ylabel('Минуты работы', fontsize=16)
+        plt.savefig('plot1.png')
+        plt.clf()
+        plt.figure(figsize=(16,8))
+        plt.plot(df.sum()[4:][::200], color='darkgreen')
+        plt.title('Зависимость нагруженности станков от времени', fontsize=20)
+        plt.xlabel('Время', fontsize=16)
+        plt.ylabel('Количество работающих станков', fontsize=16)
+        plt.savefig('plot2.png')
         return render.anal()
 
        
