@@ -42,9 +42,8 @@ class upload:
 
     def POST(self): 
         form = myform() 
-        inp = web.input()
-        # sys.stderr.write(form['bax'].value)
-        return "Grrreat success!" + str(form['bax'].value)
+        str_url = myform['bax'].value
+        return str_url
         
 class start:
     def GET(self):
