@@ -31,9 +31,9 @@ else:
 
 
 myform = form.Form( 
-    form.Textbox("bax", 
+    form.Textbox("Введите URL:", 
         form.notnull,
-        form.Validator('Must be not empty', lambda x: str(x) != ''))) 
+        form.Validator('Не должно быть пустой строкой', lambda x: str(x) != ''))) 
 
 class upload:
     def GET(self): 
