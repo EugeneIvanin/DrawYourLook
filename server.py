@@ -42,6 +42,10 @@ class get_result:
     def GET(self, url_path):
         webbrowser.open('url_path') 
         return render.get_result()
+
+    def POST(self, url_path):
+        webbrowser.open('url_path') 
+        return render.get_result()
         
 
 
