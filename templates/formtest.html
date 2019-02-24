@@ -1,9 +1,14 @@
 $def with (form)
 
-<div id="container">       
-<form name="main" method="post">
-<label for="username">Username:</label>
 
+
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+ </head>
+ <body bgcolor="#c0c0c0">
+   <p> <div id="container">       
+<form name="main" method="post">
 
 <div id="lower">
 </div><!--/ lower-->
@@ -13,9 +18,6 @@ $:form.render()
 <input type="submit" />
 </form>
 </div>
-
-
-<form name="main" method="post"> 
-$if not form.valid: <p class="error">Try again, AmeriCAN:</p>
-$:form.render()
-<input type="submit" />    </form>
+   </p>
+ </body>
+</html>
