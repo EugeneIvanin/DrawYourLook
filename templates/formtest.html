@@ -1,5 +1,20 @@
 $def with (form)
 
+<div id="container">       
+<form name="main" method="post">
+<label for="username">Username:</label>
+
+
+<div id="lower">
+</div><!--/ lower-->
+  
+$if not form.valid: <p class="error">Try again, AmeriCAN:</p>
+$:form.render()
+<input type="submit" />
+</form>
+</div>
+
+
 <form name="main" method="post"> 
 $if not form.valid: <p class="error">Try again, AmeriCAN:</p>
 $:form.render()
