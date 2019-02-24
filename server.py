@@ -1,4 +1,4 @@
-"""#!/usr/bin/env python
+#!/usr/bin/env python
 
 import web
 from web import form
@@ -31,7 +31,6 @@ else:
 
 
 myform = form.Form( 
-   form.Textbox("boe"), 
     form.Textbox("bax", 
         form.notnull,
         form.regexp('\d+', 'Must be a digit'),
@@ -46,9 +45,13 @@ class upload:
 
     def POST(self): 
         form = myform() 
-
-        str_url = myform["bax"].value
-        return str_url
+        if not form.validates(): 
+            return render.formtest(form)
+        else:
+            # form.d.boe and form['boe'].value are equivalent ways of
+            # extracting the validated arguments from the form.
+            str_url = form["bax"].value
+            return str_url
         
 class start:
     def GET(self):
@@ -80,40 +83,6 @@ class result:
     
         
 if __name__ == "__main__":
-    app.run()"""
-
-import web
-from web import form
-
-render = web.template.render('templates/')
-
-urls = ('/', 'index')
-app = web.application(urls, globals())
-
-myform = form.Form( 
-    form.Textbox("boe"), 
-    form.Textbox("bax", 
-        form.notnull,
-        form.regexp('\d+', 'Must be a digit'),
-        form.Validator('Must be more than 5', lambda x:int(x)>5))) 
-
-class index: 
-    def GET(self): 
-        form = myform()
-        # make sure you create a copy of the form by calling it (line above)
-        # Otherwise changes will appear globally
-        return render.formtest(form)
-
-    def POST(self): 
-        form = myform() 
-        if not form.validates(): 
-            return render.formtest(form)
-        else:
-            # form.d.boe and form['boe'].value are equivalent ways of
-            # extracting the validated arguments from the form.
-            str_url = form["bax"].value
-            return str_url
-
-if __name__=="__main__":
-    web.internalerror = web.debugerror
     app.run()
+
+
