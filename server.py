@@ -33,8 +33,7 @@ else:
 myform = form.Form( 
     form.Textbox("bax", 
         form.notnull,
-        form.regexp('\d+', 'Must be a digit'),
-        form.Validator('Must be more than 5', lambda x:int(x)>5))) 
+        form.Validator('Must be not empty', lambda x: str(x) != ''))) 
 
 class upload:
     def GET(self): 
