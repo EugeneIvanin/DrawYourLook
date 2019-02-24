@@ -33,7 +33,8 @@ else:
 myform = form.Form( 
     form.Textbox("bax", 
         form.notnull,
-        form.Validator('Must be not empty', lambda x:str(x) != ''))) 
+        form.regexp('\d+', 'Must be a digit'),
+        form.Validator('Must be more than 5', lambda x:int(x)>5))) 
 
 class upload:
     def GET(self): 
@@ -43,7 +44,7 @@ class upload:
         return render.formtest(form)
 
     def POST(self): 
-        str_url = myform['bax'].value
+        str_url = myform["bax"].value
         return str_url
         
 class start:
