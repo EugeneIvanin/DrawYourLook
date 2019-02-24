@@ -42,8 +42,6 @@ class upload:
 
     def POST(self): 
         form = myform() 
-        sys.stderr.write(form)
-        sys.stderr.write(form['bax'])
         sys.stderr.write(form['bax'].value)
         return "Grrreat success!" + str(form['bax'].value)
         
