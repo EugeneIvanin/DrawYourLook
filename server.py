@@ -5,6 +5,7 @@ import subprocess
 import sys
 import os
 
+import requests 
 
 web.config.debug = False
 web.config.session_parameters['cookie_path'] = '/'
@@ -27,6 +28,23 @@ else:
     session = web.config._session
 
 
+myform = form.Form( 
+    form.Textbox("boe")) 
+
+class upload:
+    def GET(self, url): 
+        form = myform()
+        # make sure you create a copy of the form by calling it (line above)
+        # Otherwise changes will appear globally
+        return render.formtest(form)
+
+    def POST(self): 
+        form = myform() 
+        return "Grrreat success! boe: %s, bax: %s" % (form.d.boe, form['bax'].value)
+        
+        
+        
+        
 class start:
     def GET(self):
         return render.start()
