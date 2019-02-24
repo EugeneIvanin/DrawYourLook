@@ -43,7 +43,7 @@ class get_result:
         with open("start.png","w") as f:
             lines = f.readlines()
             lines = [l for l in lines if "ROW" in l]
-            with open("file:///C://Users//Mvideo//Desktop//URAAAA.png","w")  as f1:
+            with open("C:/Users//Mvideo//Desktop//URAAAA.png","w")  as f1:
                 f1.writelines(lines)
         return render.get_result()
 
