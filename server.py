@@ -31,7 +31,7 @@ else:
 
 
 myform = form.Form( 
-    form.Textbox("boe")) 
+    form.Textbox("bax")) 
 
 class upload:
     def GET(self): 
@@ -42,6 +42,9 @@ class upload:
 
     def POST(self): 
         form = myform() 
+        sys.stderr.write(form)
+        sys.stderr.write(form['bax])
+        sys.stderr.write(form['bax'].value)
         return "Grrreat success!" + str(form['bax'].value)
         
 class start:
