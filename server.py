@@ -42,10 +42,7 @@ class upload:
 
     def POST(self): 
         form = myform() 
-        return "Grrreat success! boe: %s, bax: %s" % (form.d.boe, form['bax'].value)
-        
-        
-        
+        return "Grrreat success!" + str(form['bax'].value)
         
 class start:
     def GET(self):
