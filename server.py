@@ -36,7 +36,7 @@ class upload:
 
     def POST(self):
         x = web.input(myfile={})
-        filedir = '/' # change this to the directory you want to store the file in.
+        filedir = '' # change this to the directory you want to store the file in.
         if 'myfile' in x: # to check if the file-object is created
             filepath=x.myfile.filename.replace('\\','/') # replaces the windows-style slashes with linux ones.
             filename=filepath.split('/')[-1] # splits the and chooses the last part (the filename with extension)
