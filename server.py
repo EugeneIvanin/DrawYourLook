@@ -67,6 +67,8 @@ class upload:
             r = requests.get(str_url)
             with open("get_data.xlsx",'wb') as f:
                     f.write(r.content) 
+            ob = get_result()
+            ob.GET()
             return render.get_result()
         
 class start:
