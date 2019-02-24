@@ -39,16 +39,10 @@ myform = form.Form(
         form.Validator('Не должно быть пустой строкой', lambda x: str(x) != ''))) 
 
 class get_result:
-    def GET(self, url_path):
-        webbrowser.open('url_path') 
+    def GET(self):
         return render.get_result()
 
-    def POST(self, url_path):
-        webbrowser.open('url_path') 
-        return render.get_result()
-        
-
-
+       
 class upload:
     def GET(self): 
         form = myform()
