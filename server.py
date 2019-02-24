@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 
 import web
+from web import form
+
 import subprocess
 import sys
 import os
