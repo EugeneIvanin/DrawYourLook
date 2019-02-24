@@ -31,7 +31,7 @@ else:
 
 
 myform = form.Form( 
-    form.Textbox("Введите URL:", 
+    form.Textbox("Enter URL:", 
         form.notnull,
         form.Validator('Не должно быть пустой строкой', lambda x: str(x) != ''))) 
 
@@ -49,7 +49,7 @@ class upload:
         else:
             # form.d.boe and form['boe'].value are equivalent ways of
             # extracting the validated arguments from the form.
-            str_url = form["Введите URL:"].value
+            str_url = form["Enter URL:"].value
             r = requests.get(str_url)
             with open("get_data.xlsx",'wb') as f:
                     f.write(r.content) 
