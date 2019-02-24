@@ -31,6 +31,7 @@ else:
 
 
 myform = form.Form( 
+   form.Textbox("boe"), 
     form.Textbox("bax", 
         form.notnull,
         form.regexp('\d+', 'Must be a digit'),
@@ -44,6 +45,8 @@ class upload:
         return render.formtest(form)
 
     def POST(self): 
+        form = myform() 
+
         str_url = myform["bax"].value
         return str_url
         
