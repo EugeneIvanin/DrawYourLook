@@ -17,7 +17,8 @@ urls = ("/", "start",
         "/filters(.*)", "filters",
         "/result(.*)", "result",
         "/process(.*)", "process",
-       "/upload", "upload")
+       "/upload", "upload",
+       "/get_result", "get_result")
 
 app = web.application(urls, globals())
 render = web.template.render('templates/', cache = False)
@@ -34,6 +35,13 @@ myform = form.Form(
     form.Textbox("Enter URL:", 
         form.notnull,
         form.Validator('Не должно быть пустой строкой', lambda x: str(x) != ''))) 
+
+class get_result:
+    def GET(self):
+        return render.get_result()
+
+
+
 
 class upload:
     def GET(self): 
@@ -53,7 +61,7 @@ class upload:
             r = requests.get(str_url)
             with open("get_data.xlsx",'wb') as f:
                     f.write(r.content) 
-            return render.start()
+            return render.get_result()
         
 class start:
     def GET(self):
