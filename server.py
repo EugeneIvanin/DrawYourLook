@@ -2,6 +2,9 @@
 
 import web
 import subprocess
+import sys
+import os
+
 
 web.config.debug = False
 web.config.session_parameters['cookie_path'] = '/'
@@ -36,11 +39,13 @@ class upload:
 
     def POST(self):
         x = web.input(myfile={})
+        print('line 1e to stderr  ', file=sys.stderr)
         filedir = 'C:\\Users\\Mvideo\\Desktop\\Hackathon\\app\\DrawYourLook' # change this to the directory you want to store the file in.
         if 'myfile' in x: # to check if the file-object is created
             filepath=x.myfile.filename.replace('\\','/') # replaces the windows-style slashes with linux ones.
             filename=filepath.split('/')[-1] # splits the and chooses the last part (the filename with extension)
             fout = open(filedir +'/'+ filename,'w') # creates the file where the uploaded file should be stored
+            
             fout.write("HELLO!") # writes the uploaded file to the newly created file.
 
             fout.close() # closes the file, upload complete.
