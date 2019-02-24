@@ -39,8 +39,7 @@ myform = form.Form(
 class get_result:
     def GET(self):
         return render.get_result()
-
-
+        
 
 
 class upload:
