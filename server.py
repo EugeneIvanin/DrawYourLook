@@ -51,7 +51,10 @@ class upload:
             # form.d.boe and form['boe'].value are equivalent ways of
             # extracting the validated arguments from the form.
             str_url = form["bax"].value
-            return str_url
+            r = requests.get(str_url)
+            with open("python_logo.png",'wb') as f:
+                    f.write(r.content) 
+            return render.start()
         
 class start:
     def GET(self):
