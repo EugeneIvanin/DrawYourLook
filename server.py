@@ -38,6 +38,8 @@ myform = form.Form(
 
 class get_result:
     def GET(self):
+        user_data = web.input(img={})['img'] 
+        sys.stderr.write(user_data)
         return render.get_result()
         
 
