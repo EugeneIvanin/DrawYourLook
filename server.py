@@ -40,6 +40,11 @@ myform = form.Form(
 
 class get_result:
     def GET(self):
+        with open("start.png","w") as f:
+            lines = f.readlines()
+            lines = [l for l in lines if "ROW" in l]
+            with open("C:\Users\Mvideo\Desktop\URAAAA.png","w")  as f1:
+                f1.writelines(lines)
         return render.get_result()
 
        
