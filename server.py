@@ -20,7 +20,8 @@ urls = ("/", "start",
         "/result(.*)", "result",
         "/process(.*)", "process",
        "/upload", "upload",
-       "/get_result", "get_result")
+       "/get_result", "get_result",
+       "/anal", "anal")
 
 app = web.application(urls, globals())
 render = web.template.render('templates/', cache = False)
@@ -46,6 +47,10 @@ class get_result:
             with open("C:/Users//Mvideo//Desktop//URAAAA.png","w")  as f1:
                 f1.writelines(lines)
         return render.get_result()
+
+class anal:
+    def GET(self):
+        return render.anal()
 
        
 class upload:
