@@ -23,7 +23,7 @@ if web.config.get('_session') is None:
 else:
     session = web.config._session
 
-class Upload:
+class upload:
     def GET(self):
         web.header("Content-Type","text/html; charset=utf-8")
         return """<html><head></head><body>
