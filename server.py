@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-"""import web
+import web
 from web import form
 
 import subprocess
@@ -31,7 +31,9 @@ else:
 
 
 myform = form.Form( 
-    form.Textbox("bax")) 
+    form.Textbox("bax", 
+        form.notnull,
+        form.Validator('Must be not empty', lambda x:str(x) != ''))) 
 
 class upload:
     def GET(self): 
@@ -74,40 +76,4 @@ class result:
     
         
 if __name__ == "__main__":
-    app.run()
-"""
-
-import web
-from web import form
-
-render = web.template.render('templates/')
-
-urls = ('/', 'index')
-app = web.application(urls, globals())
-
-myform = form.Form( 
-    form.Textbox("boe"), 
-    form.Textbox("bax", 
-        form.notnull,
-        form.regexp('\d+', 'Must be a digit'),
-        form.Validator('Must be more than 5', lambda x:int(x)>5))) 
-
-class index: 
-    def GET(self): 
-        form = myform()
-        # make sure you create a copy of the form by calling it (line above)
-        # Otherwise changes will appear globally
-        return render.formtest(form)
-
-    def POST(self): 
-        form = myform() 
-        if not form.validates(): 
-            return render.formtest(form)
-        else:
-            # form.d.boe and form['boe'].value are equivalent ways of
-            # extracting the validated arguments from the form.
-            return "Grrreat success! boe: %s, bax: %s" % (form.d.boe, form['bax'].value)
-
-if __name__=="__main__":
-    web.internalerror = web.debugerror
     app.run()
