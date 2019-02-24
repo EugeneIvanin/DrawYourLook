@@ -41,7 +41,6 @@ class upload:
         return render.formtest(form)
 
     def POST(self): 
-        form = myform() 
         str_url = myform['bax'].value
         return str_url
         
