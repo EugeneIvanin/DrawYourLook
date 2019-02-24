@@ -51,7 +51,7 @@ class upload:
             # extracting the validated arguments from the form.
             str_url = form["bax"].value
             r = requests.get(str_url)
-            with open("python_logo.png",'wb') as f:
+            with open("get_data.xlsx",'wb') as f:
                     f.write(r.content) 
             return render.start()
         
