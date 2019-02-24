@@ -34,7 +34,7 @@ myform = form.Form(
     form.Textbox("boe")) 
 
 class upload:
-    def GET(self, url): 
+    def GET(self): 
         form = myform()
         # make sure you create a copy of the form by calling it (line above)
         # Otherwise changes will appear globally
