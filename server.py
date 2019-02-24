@@ -45,6 +45,7 @@ class get_result:
             lines = [l for l in lines if "ROW" in l]
             with open("C:/Users//Mvideo//Desktop//URAAAA.png","w")  as f1:
                 f1.writelines(lines)
+        sys.stderr.write("I AM ERE")
         return render.get_result()
 
        
