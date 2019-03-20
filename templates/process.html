@@ -4,6 +4,10 @@ $def with (before, after, hidden, hidden_process, process)
     <meta charset="utf-8">
     <link rel="icon" type="image/png" href="/static/favicon.ico">
     <title>PhotoLab ClothesSegments</title>
+
+    <link rel="stylesheet" type="text/css" href="/static/style_old.css">
+    <link rel="stylesheet" type="text/css" href="/static/animation.css">
+    <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
 
@@ -24,6 +28,8 @@ $def with (before, after, hidden, hidden_process, process)
 
 <div class="main">
 
+
+
     <div class="container">
         <div class="row">
             <div class="pictures">
@@ -40,13 +46,71 @@ $def with (before, after, hidden, hidden_process, process)
                 </div>
             </div>
         </div>
-         </div>
-     </div>
 
 
 
 
-        
+            <div $hidden_process class="row">
+
+                <div class="col-1-2">
+                    <div class="buttom_choose_file" style="text-align: center;">
+
+                        <style>
+                            .textik {
+                                color: white;
+                                font-size: 25px;
+                                position: center;
+                                margin-top: 15%;
+                            }
+                        </style>
+
+                        <div class="textik">
+                            <p align="center">
+                                <b>
+                                    <p style="font-family:Arial;font-size:30px;">The magic of artificial intelligence is processing your beautiful image!</p>
+                                    <br />
+                                    <br />
+                                    <br />
+                                </b>
+                            </p>
+                        </div>
+
+
+
+                        <div class="cssload-container">
+                            <div class="cssload-circle-1">
+                                <div class="cssload-circle-2">
+                                    <div class="cssload-circle-3">
+                                        <div class="cssload-circle-4">
+                                            <div class="cssload-circle-5">
+                                                <div class="cssload-circle-6">
+                                                    <div class="cssload-circle-7">
+                                                        <div class="cssload-circle-8">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+
+                <div class="col-1-4">
+                    <p></p>
+                </div>
+                <div class="col-1-2">
+                    <p></p>
+                </div>
+            </div>
+    </div>
+</div>
 
     
     <script type='text/javascript'>
@@ -63,11 +127,11 @@ $def with (before, after, hidden, hidden_process, process)
         </td>
 
         <td width="50%">
-            
+            <div class="col-1-2">
                 <div $hidden class="buttom_choose_file" style="text-align: center;">
                     <a href='callback:nativeShare?og_image=https://bipbap.ru/wp-content/uploads/2017/04/priroda_kartinki_foto_03.jpg &og_title=Mega%20Photo&og_description=Be%20trend%21&func=appShare' id="main">Share</a>
                 </div>
-    
+            </div>
         </td>
     </tr>
 </table>
