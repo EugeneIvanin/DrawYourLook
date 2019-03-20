@@ -28,28 +28,6 @@ $def with (before, after, hidden, hidden_process, process)
 
 <div class="main">
 
-
-
-    <div class="container">
-        <div class="row">
-            <div class="pictures">
-                <div $hidden id="example" style="text-align: center;">
-                    <div class="fb-share-button" data-href="$after" data-layout="button" data-size="large" data-mobile-iframe="false"></div>
-                    <table width="100%">
-                        <tr>
-                            <td>
-                                <img src="$after" width="100%" alt="example_pic_posle" />
-                            </td>
-                        </tr>
-                    </table>
-
-                </div>
-            </div>
-        </div>
-
-
-
-
             <div $hidden_process class="row">
 
                 <div class="col-1-2">
@@ -58,7 +36,7 @@ $def with (before, after, hidden, hidden_process, process)
                         <style>
                             .textik {
                                 color: white;
-                                font-size: 25px;
+                                font-size: 45px;
                                 position: center;
                                 margin-top: 15%;
                             }
@@ -67,7 +45,7 @@ $def with (before, after, hidden, hidden_process, process)
                         <div class="textik">
                             <p align="center">
                                 <b>
-                                    <p style="font-family:Arial;font-size:30px;">The magic of artificial intelligence is processing your beautiful image!</p>
+                                    <p style="font-family:Arial;font-size:45px;">The magic of artificial intelligence is processing your beautiful image!</p>
                                     <br />
                                     <br />
                                     <br />
@@ -99,42 +77,12 @@ $def with (before, after, hidden, hidden_process, process)
                     </div>
                 </div>
             </div>
-
-            <div class="row">
-
-                <div class="col-1-4">
-                    <p></p>
-                </div>
-                <div class="col-1-2">
-                    <p></p>
-                </div>
-            </div>
     </div>
 </div>
 
     
-    <script type='text/javascript'>
-            function appShare( result ) {
-            } 
-   </script>
+   
 
-<table>
-    <tr>
-        <td width="50%">
-            <div $hidden class="buttom_choose_file" style="text-align: center;">
-                <a href="/filtersfromprocess">Back</a>
-            </div>
-        </td>
-
-        <td width="50%">
-            <div class="col-1-2">
-                <div $hidden class="buttom_choose_file" style="text-align: center;">
-                    <a href='callback:nativeShare?og_image=https://bipbap.ru/wp-content/uploads/2017/04/priroda_kartinki_foto_03.jpg &og_title=Mega%20Photo&og_description=Be%20trend%21&func=appShare' id="main">Share</a>
-                </div>
-            </div>
-        </td>
-    </tr>
-</table>
     
 <script>
     setTimeout(function() {
