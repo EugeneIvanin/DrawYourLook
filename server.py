@@ -41,6 +41,10 @@ class filters:
 class process:
     def GET(self, filter_url):
         session['filter_url'] = filter_url
+        return render.process("", "", "hidden", "", 'true')
+        
+class result:
+    def GET(self, dummy_url):
         
         filter_url = session['filter_url']
         origin_url = session['origin_url']
@@ -56,10 +60,6 @@ class process:
                 
         after = api.template_process(origin_url, template_name)
         session['after'] = after
-        return render.process("", "", "hidden", "", 'true')
-        
-class result:
-    def GET(self, dummy_url):
         after = session['after']
         # after = subprocess.check_output(["bash", "script.sh", origin_url, filter_url])
         # catch error
