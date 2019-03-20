@@ -64,9 +64,9 @@ class ClientOpeapi(object):
     def _check_error(self, resp_body):
         tree = ET.fromstring(resp_body)
         status = tree.findall('status')[0].text.upper()
-        if status != 'OK' and self._check_in_progress(resp_body) == False:
-            description = tree.findall('description')[0].text
-            raise Exception(description)
+        #if status != 'OK' and self._check_in_progress(resp_body) == False:
+            #description = tree.findall('description')[0].text
+            #raise Exception(description)
 
     def _check_in_progress(self, resp_body):
         tree = ET.fromstring(resp_body)
