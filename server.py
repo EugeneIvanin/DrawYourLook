@@ -3,6 +3,8 @@
 import web
 import subprocess
 from client_opeapi import ClientOpeapi
+from daemon import runner
+
 
 web.config.debug = False
 web.config.session_parameters['cookie_path'] = '/'
@@ -71,4 +73,6 @@ class result:
     
         
 if __name__ == "__main__":
-    app.run()
+    daemon_runner = runner.DaemonRunner(app)
+    daemon_runner.do_action()
+
