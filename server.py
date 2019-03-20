@@ -3,7 +3,7 @@
 import web
 import subprocess
 from client_opeapi import ClientOpeapi
-from daemon import runner
+import daemon
 
 
 web.config.debug = False
