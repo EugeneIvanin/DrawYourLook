@@ -10,13 +10,7 @@ web.config.debug = False
 web.config.session_parameters['cookie_path'] = '/'
 
 class MyApplication(web.application):
-    def __init__(self, *args):
-        self.stdin_path = '/dev/null'
-        self.stdout_path = '/dev/tty'
-        self.stderr_path = '/dev/tty'
-        self.pidfile_path =  '/tmp/foo.pid'
-        self.pidfile_timeout = 5
-        
+ 
     def run(self, port=80, *middleware):
         func = self.wsgifunc(*middleware)
         return web.httpserver.runsimple(func, ('0.0.0.0', port))
