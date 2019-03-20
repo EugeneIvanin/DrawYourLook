@@ -72,6 +72,6 @@ class result:
         return render.result("", after, "", "hidden", 'false')
 
     
- 
- app.run()
+ if __name__ == "__main__":
+     app.run()
 
