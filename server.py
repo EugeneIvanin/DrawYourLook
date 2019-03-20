@@ -22,7 +22,7 @@ render = web.template.render('templates/', cache = False)
 
 
 if web.config.get('_session') is None:
-    session = web.session.Session(app, web.session.DiskStore('sessions'), {'filter_url': "", 'origin_url': ""})
+    session = web.session.Session(app, web.session.DiskStore('sessions'), {'filter_url': "", 'origin_url': "", 'after': ""})
     web.config._session = session
 else:
     session = web.config._session
@@ -41,11 +41,7 @@ class filters:
 class process:
     def GET(self, filter_url):
         session['filter_url'] = filter_url
-        return render.process("", "", "hidden", "", 'true')
         
-class result:
-    def GET(self, dummy_url):
-     
         filter_url = session['filter_url']
         origin_url = session['origin_url']
         api = ClientOpeapi('dd23c729867efed20328bf3a8b7e9f23', '857165871a491e1ebc72b1abb2415606')
@@ -59,6 +55,12 @@ class result:
                 template_name = '1001188'
                 
         after = api.template_process(origin_url, template_name)
+        session['after'] = after
+        return render.process("", "", "hidden", "", 'true')
+        
+class result:
+    def GET(self, dummy_url):
+        after = session['after']
         # after = subprocess.check_output(["bash", "script.sh", origin_url, filter_url])
         # catch error
         if not after.startswith('http'):
