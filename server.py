@@ -60,7 +60,7 @@ class result:
                 
         try:
             after = api.template_process(origin_url, template_name)
-        except Error:
+        except:
             after = '/static/PhLab1.jpg'
         session['after'] = after
         after = session['after']
