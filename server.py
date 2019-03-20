@@ -10,7 +10,7 @@ web.config.debug = False
 web.config.session_parameters['cookie_path'] = '/'
 
 class MyApplication(web.application):
-    def __init__(self):
+    def __init__(self, *args):
         self.stdin_path = '/dev/null'
         self.stdout_path = '/dev/tty'
         self.stderr_path = '/dev/tty'
