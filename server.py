@@ -71,7 +71,8 @@ class result:
         # catch erro
         return render.result("", after, "", "hidden", 'false')
 
-    
- if __name__ == "__main__":
-     app.run()
+   
+   
+if __name__ == "__main__":
+    app.run()
 
