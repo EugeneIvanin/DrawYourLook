@@ -66,7 +66,7 @@ class result:
         after = session['after']
         # after = subprocess.check_output(["bash", "script.sh", origin_url, filter_url])
         # catch erro
-        return render.process("", after, "", "hidden", 'false')
+        return render.result("", after, "", "hidden", 'false')
 
     
         
