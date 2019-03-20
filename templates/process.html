@@ -137,9 +137,11 @@ $def with (before, after, hidden, hidden_process, process)
 </table>
     
 <script>
-    if ($process) {
+    setTimeout(function() {
+   if ($process) {
         window.location.href='/result';
     }
+}, 2000);
 </script>
 
     
