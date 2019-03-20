@@ -73,6 +73,5 @@ class result:
 
     
  
-with daemon.DaemonContext():
-    app.run()
+ app.run()
 
