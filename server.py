@@ -72,8 +72,8 @@ class result:
         return render.result("", after, "", "hidden", 'false')
 
     
-        
-if __name__ == "__main__":
-    daemon_runner = runner.DaemonRunner(app)
-    daemon_runner.do_action()
+ 
+with daemon.DaemonContext():
+    if __name__ == "__main__":
+        app.run()
 
